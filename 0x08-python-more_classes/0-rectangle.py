@@ -4,4 +4,4 @@
 
 class Rectangle():
     """ Init class Rectangle """
-    pass:
+    pass
