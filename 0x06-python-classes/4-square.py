@@ -20,7 +20,7 @@ class Square():
     def size(self):
         """ Creating size """
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """ Creating area """
