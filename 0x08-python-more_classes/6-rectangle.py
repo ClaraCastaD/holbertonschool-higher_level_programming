@@ -60,7 +60,6 @@ class Rectangle():
             rect = rect[:-1]
         return rect
 
-
     def __repr__(self):
         """ Repr of the rectangle """
         return "Rectangle(" + str(self.__width) + \
