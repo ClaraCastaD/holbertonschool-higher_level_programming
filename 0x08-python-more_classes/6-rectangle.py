@@ -53,12 +53,13 @@ class Rectangle():
     def __str__(self):
         """ Print a Rectangle """
         rect = ""
-        if self.__width > 0 or self.__height:
+        if self.__width > 0 and self.__height > 0:
             for i in range(self.__height):
                 rect += "#" * self.__width
                 rect += "\n"
             rect = rect[:-1]
         return rect
+
 
     def __repr__(self):
         """ Repr of the rectangle """
