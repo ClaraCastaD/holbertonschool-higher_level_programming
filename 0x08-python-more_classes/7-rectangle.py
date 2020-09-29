@@ -11,7 +11,7 @@ class Rectangle():
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1 
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -56,7 +56,7 @@ class Rectangle():
         rect = ""
         if self.__width > 0 and self.__height > 0:
             for i in range(self.__height):
-                rect += "#" * self.__width
+                rect += str(self.print_symbol) * self.__width
                 rect += "\n"
             rect = rect[:-1]
         return rect
