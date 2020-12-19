@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-""" find peak"""
+# This script finds a peak in a list of integers
 
 
 def find_peak(list_of_integers):
     if len(list_of_integers) == 0:
         return None
-    if list_of_integers[0] >= list_of_integers[1]:
-        return (list_of_integers[0])
-    else:
-        for i in range(1, len(list_of_integers)):
-            try:
-                if (list_of_integers[i] >= list_of_integers[i - 1] and
-                   list_of_integers[i] >= list_of_integers[i + 1]):
-                    return list_of_integers[i]
-            except:
-                return list_of_integers[len(list_of_integers)]
+    low = 0
+    high = len(list_of_integers) - 1
+    while low < high:
+        mid = (low + high) // 2
+        if list_of_integers[mid] > list_of_integers[mid + 1]:
+            high = mid
+        else:
+            low = mid + 1
+    return list_of_integers[low]
